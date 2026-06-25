@@ -158,23 +158,6 @@ if uploaded_file is not None:
         st.divider()
 
 
-        # SEGMENT STATS
-
-        st.subheader("📦 Distribution des segments")
-
-        counts = df[segment_column].value_counts()
-
-        st.dataframe(
-            counts.reset_index().rename(
-                columns={
-                    "index": "Segment",
-                    segment_column: "Volume"
-                }
-            )
-        )
-
-        st.divider()
-
 
         # GENERATION
 
